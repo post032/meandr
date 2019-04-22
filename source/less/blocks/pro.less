@@ -1,0 +1,127 @@
+.pro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+}
+
+.pro__title {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #222222;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 12px;
+}
+
+.pro__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #4A4556;
+  margin-top: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.pro__text--color {
+  color: #F47821;
+}
+
+.pro__button {
+  border: none;
+  border-radius: 50px;
+  background-color: #ffffff;
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro__button::before {
+    content: "";
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(135,135,135,0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  .pro__plus {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #222222;
+  padding-left: 46px;
+  padding-right: 30px;
+  padding-top: 18px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.pro__plus::before,
+.pro__plus::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background: #F47821;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+
+}
+
+.pro__plus::after {
+  transform: rotate(90deg);
+}
+
+.pro__plus:hover::before,
+.pro__plus:focus::before {
+  transition: 1s;
+  transform: rotate(90deg);
+}
+
+.pro__plus:focus::after,
+.pro__plus:hover::after {
+  transition: 1s;
+  transform: rotate(180deg);
+}
+
+.pro__button:hover::before,
+.pro__button:focus::before {
+  transition: 1s;
+  opacity: 0;
+}
+
+.pro__button:hover,
+.pro__button:focus {
+  transition: 1s;
+  background-color: rgba(135,135,135,0.05);
+  outline: none;
+}
+
+@media (min-width: @size-tablet) {
+  .pro__title {
+    font-size: 48px;
+    line-height: 54px;
+    text-align: center;
+  }
+}
+@media (min-width: @size-desktop) {
+
+}
